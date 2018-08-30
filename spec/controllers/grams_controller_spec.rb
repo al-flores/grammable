@@ -37,7 +37,7 @@ RSpec.describe GramsController, type: :controller do
         expect(response).to redirect_to new_user_session_path
       end
     
-      
+      it "should successfully create a new gram in our database" do
         user = User.create(
           email:                 'fakeuser@gmail.com',
           password:              'secretPassword',
